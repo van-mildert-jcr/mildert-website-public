@@ -1,0 +1,15 @@
+<div id="back-to-top" title="Top of page" class="fas fa-chevron-up"></div>
+<script>
+    {
+        const control_element = document.getElementById('back-to-top');
+        control_element.addEventListener('click', () => {
+            window.scroll(0,0);
+        });
+        visibility();
+        window.addEventListener('scroll', visibility, {passive:true});
+        window.addEventListener('resize', visibility, {passive:true});
+        function visibility() {
+            control_element.classList.toggle('show', window.scrollY >= 100);
+        }
+    }
+</script>
